@@ -55,22 +55,37 @@ Customer churn is a major challenge for telecom companies. This project uses mac
 ## 📂 Project Structure
 
 ```
-project/
+CUSTOMER_ATTRITION/
 │
-├── app.py
-├── model/
-│   └── customer_churn_model.pkl
+├── assets/
+│ └── style.css # UI Styling (Dark Theme)
+│
+├── backend/
+│ ├── utils.py # Helper functions
+│ └── pycache/
+│
+├── config/
+│ └── settings.py # Configuration settings
 │
 ├── data/
-│   ├── churn_data.csv
-│   └── users.csv
+│ ├── users.csv # User login data
+│ └── Telco Dataset.csv # Customer churn dataset
+│
+├── model/
+│ ├── customer_churn_model.pkl # Trained ML model
+│ ├── features.json # Feature list
+│ └── notebook.ipynb # Model training
 │
 ├── pages/
-│   ├── Login.py
-│   ├── Register.py
-│   ├── Overview.py
-│   └── Payment.py
+│ ├── Login.py
+│ ├── Register.py
+│ ├── Payment.py
+│ └── Overview.py
 │
+├── app.py # Main Streamlit App
+├── encoders.pkl # Encoding objects
+├── requirements.txt # Dependencies
+├── .env # Secret keys (NOT shared)
 └── README.md
 ```
 
