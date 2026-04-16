@@ -1,0 +1,93 @@
+/* 🌑 MAIN BACKGROUND */
+.stApp {
+    background-color: #000000;
+}
+
+/* 📦 CARD */
+.card {
+    background-color: #161616;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #27272A;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+/* Background */
+body {
+    background-color: #5d4b4b;
+}
+
+/* Center Card */
+.center-box {
+    background-color: #161616;
+    padding: 40px;
+    border-radius: 15px;
+    border: 6px solid #27272A;
+    
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.5);
+}
+
+/* Inputs */
+input {
+    background-color: #000000 !important;
+    color: white !important;
+    width: 80%;
+    border: 1px solid #27272A;
+}
+
+/* Button */
+div.stButton > button {
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 8px;
+    width: 100%;
+}
+
+/* ✨ Hover */
+.card:hover {
+    border: 1px solid #3f3f46;
+    transform: translateY(-5px);
+}
+
+/* TEXT */
+.card h3 {
+    color: #A1A1AA;
+}
+
+.card h1 {
+    color: white;
+}
+
+/* BUTTON */
+div.stButton > button {
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 8px;
+    border: none;
+}
+
+/* SIDEBAR */
+section[data-testid="stSidebar"] {
+    background-color: #161616;
+    border-right: 1px solid #27272A;
+}
+/* 🔥 Fix input width inside center box */
+.center-box input {
+    width: 60% !important;
+    margin: 0 auto;       /* center horizontally */
+    display: block;
+}
+
+/* 🔥 Fix label alignment */
+.center-box label {
+    width: 60%;
+    margin: 10px auto 5px auto;
+    display: block;
+}
+
+/* 🔥 Fix button alignment */
+.center-box .stButton > button {
+    width: 60%;
+    margin: 15px auto;
+    display: block;
+}
