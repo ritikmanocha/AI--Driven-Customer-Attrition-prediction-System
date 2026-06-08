@@ -42,11 +42,11 @@ if st.button("Pay Now"):
                 "quantity": 1,
             }],
             mode="payment",
-            success_url="http://localhost:8501/Payment?success=true",
-            cancel_url="http://localhost:8501/Payment?cancel=true",
+            success_url="https://ai--driven-customer-attrition-prediction-system-ehs8jx9r3erocu.streamlit.app/Payment?success=true",
+            cancel_url="https://ai--driven-customer-attrition-prediction-system-ehs8jx9r3erocu.streamlit.app/Payment?cancel=true",
         )
 
-        st.markdown(f"[Click here to Pay]({session.url})")
+        st.link_button("Proceed to Payment", session.url)
 
     except Exception as e:
         st.error(str(e))
