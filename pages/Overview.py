@@ -4,15 +4,9 @@ import numpy as np
 import pickle
 from chatbot.rag_chatbot import ask_chatbot
 
-#------------Login page procedure-----------------#
-if "logged_in" not in st.session_state:
-    st.session_state["logged_in"] = False
-
-
-if not st.session_state["logged_in"]:
-    st.warning("Login first")
-    st.stop()
-
+#------------Payment Page procedure-----------------#
+if "paid" not in st.session_state:
+    st.session_state["paid"] = False
 
 
 
