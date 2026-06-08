@@ -2,5 +2,14 @@ streamlit
 pandas
 numpy
 scikit-learn
+imbalanced-learn
+faiss-cpu
+sentence-transformers
+huggingface-hub
+transformers
+python-dotenv
 matplotlib
-seaborn
+plotly
+jupyter
+ipykernel
+generative ai
