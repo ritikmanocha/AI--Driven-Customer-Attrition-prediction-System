@@ -13,3 +13,4 @@ plotly
 jupyter
 ipykernel
 google-generativeai
+stripe
