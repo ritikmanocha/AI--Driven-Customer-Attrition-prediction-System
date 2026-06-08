@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+from chatbot.rag_chatbot import ask_chatbot
 
 #------------Login page procedure-----------------#
 if "logged_in" not in st.session_state:
@@ -162,6 +163,7 @@ def encode():
     return data
 
 
+
 # ---------------- PREDICTION ---------------- #
 
 
@@ -179,6 +181,40 @@ if st.button("🔍 Predict Churn"):
     prob = model.predict_proba(data)[0][1]
 
     st.subheader("📈 Prediction Result")
+
+    
+
+    # ---------------- AI ANALYSIS ---------------- #
+
+    customer_info = f"""
+    Contract: {contract}
+    Internet Service: {internet}
+    Tenure: {tenure}
+    Monthly Charges: {monthly}
+    Payment Method: {payment}
+    Tech Support: {tech_support}
+    Online Security: {online_security}
+
+    Churn Probability: {round(prob*100,2)}%
+    """
+
+    query = f"""
+    Analyze this telecom customer.
+
+    {customer_info}
+
+    Why is this customer at risk?
+
+    Suggest retention actions.
+    """
+
+    ai_response = ask_chatbot(query)
+
+    st.subheader("🤖 AI Churn Analysis")
+
+    st.write(ai_response)
+
+
 
     col1, col2, col3 = st.columns(3)
 
