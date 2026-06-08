@@ -9,7 +9,7 @@ if "paid" not in st.session_state:
     st.session_state["paid"] = False
 
 if not st.session_state["logged_in"]:
-    st.info("""
+    st.warning("""
 🔐 Welcome to the AI-Driven Customer Attrition Prediction System
 
 Please login to continue.
