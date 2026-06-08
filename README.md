@@ -1,119 +1,177 @@
-# 📊 AI-Driven Customer Attrition Prediction System
+# 📊 AI-Driven Customer Attrition Prediction System 
 
-A machine learning-powered web application that predicts customer churn using telecom data. Built with a clean, professional UI and deployed using Streamlit.
+A comprehensive AI-powered customer retention platform that combines Machine Learning-based churn prediction with a Retrieval-Augmented Generation (RAG) chatbot for intelligent customer support and business insights.
 
 ---
 
 ## 🚀 Project Overview
 
-Customer churn is a major challenge for telecom companies. This project uses machine learning to identify customers who are likely to leave, helping businesses take proactive retention actions.
+Customer attrition (churn) is a critical challenge for telecom companies. This project leverages Machine Learning to predict customer churn risk and integrates a RAG-powered chatbot that can answer customer and business-related queries using a custom telecom knowledge base.
+
+The system helps organizations identify at-risk customers, understand churn patterns, and provide intelligent assistance through conversational AI.
 
 ---
 
-## 🎯 Key Features
+## ✨ Key Features
 
-* 🔐 User Authentication (Login & Register)
-* 💳 Payment Gateway Integration (Stripe - optional premium access)
-* 📊 Interactive Dashboard (Clean Tech Dark UI)
-* 🤖 Real-time Churn Prediction
-* 📈 Probability & Risk Analysis (High / Medium / Low)
-* 💡 Smart Recommendations for retention
-* 📉 Data Visualization (Charts & Metrics)
+### 🤖 Customer Churn Prediction
+
+* Predicts customer attrition using Machine Learning
+* Displays churn probability and risk level
+* Supports real-time predictions
+* Generates actionable retention recommendations
+
+### 💬 RAG Chatbot Assistant
+
+* Retrieval-Augmented Generation (RAG) architecture
+* Semantic search using FAISS vector database
+* Context-aware responses
+* Telecom knowledge base integration
+* Intelligent question answering
+
+### 📊 Interactive Dashboard
+
+* Streamlit-based user interface
+* Customer analytics and insights
+* Business overview dashboard
+* Clean and responsive design
+
+### 🔐 User Management
+
+* Login authentication system
+* User registration support
+* Session management
+
+### 💳 Payment Module
+
+* Payment integration support
+* Premium feature access management
 
 ---
 
-## 🧠 Machine Learning Model
+## 🧠 Machine Learning Pipeline
+
+### Churn Prediction Model
 
 * Algorithm: Random Forest Classifier
-* Dataset: Telco Customer Churn Dataset
-* Techniques Used:
+* Data Preprocessing
+* Feature Encoding
+* Missing Value Handling
+* Class Imbalance Handling (SMOTE)
+* Model Evaluation & Validation
 
-  * Data Cleaning & Preprocessing
-  * Feature Encoding
-  * Handling Missing Values
-  * SMOTE (for class imbalance)
-  * Train-Test Split
-  * Model Evaluation (Accuracy, Precision, Recall)
+### RAG Architecture
+
+* Document Processing
+* Text Chunking
+* Embedding Generation
+* FAISS Vector Indexing
+* Context Retrieval
+* LLM-based Response Generation
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Frontend: Streamlit
-* Backend: Python
-* Libraries:
+### Frontend
 
-  * Pandas
-  * NumPy
-  * Scikit-learn
-  * Pickle
-* UI Styling: Custom CSS (Clean Tech Dark Mode)
-* Version Control: Git & GitHub
+* Streamlit
+* HTML/CSS
+
+### Backend
+
+* Python
+
+### Machine Learning
+
+* Scikit-learn
+* Pandas
+* NumPy
+
+### Generative AI & RAG
+
+* LangChain
+* FAISS
+* HuggingFace Embeddings
+
+### Data Storage
+
+* Pickle
+* CSV Files
+
+### Version Control
+
+* Git
+* GitHub
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 CUSTOMER_ATTRITION/
 │
 ├── assets/
-│ └── style.css # UI Styling (Dark Theme)
+│   └── style.css
 │
 ├── backend/
-│ ├── utils.py # Helper functions
-│ └── pycache/
+│
+├── chatbot/
+│   ├── rag_chatbot.py
+│   ├── rag_chatbot.ipynb
+│   ├── telecom_index.faiss
+│   ├── telecom_texts.pkl
+│   └── vector_db.ipynb
 │
 ├── config/
-│ └── settings.py # Configuration settings
+│   └── settings.py
 │
 ├── data/
-│ ├── users.csv # User login data
-│ └── Telco Dataset.csv # Customer churn dataset
+│   ├── users.csv
+│   └── WA_Fn-UseC_-Telco-Customer-Churn.csv
 │
 ├── model/
-│ ├── customer_churn_model.pkl # Trained ML model
-│ ├── features.json # Feature list
-│ └── notebook.ipynb # Model training
+│   ├── customer_churn_model.pkl
+│   ├── features.json
+│   └── Customer churn prediction.ipynb
 │
 ├── pages/
-│ ├── Login.py
-│ ├── Register.py
-│ ├── Payment.py
-│ └── Overview.py
+│   ├── Login.py
+│   ├── Overview.py
+│   └── Payment.py
 │
-├── app.py # Main Streamlit App
-├── encoders.pkl # Encoding objects
-├── requirements.txt # Dependencies
-├── .env # Secret keys (NOT shared)
+├── app.py
+├── encoders.pkl
+├── .env
+├── .gitignore
 └── README.md
 ```
 
 ---
 
-## ▶️ How to Run the Project
+## ▶️ Installation & Setup
 
-1. Clone the repository:
+### Clone Repository
 
-```
-git clone https://github.com/your-username/your-repo-name.git
-```
-
-2. Navigate to the folder:
-
-```
-cd your-repo-name
+```bash
+git clone <repository-url>
 ```
 
-3. Install dependencies:
+### Navigate to Project
 
+```bash
+cd CUSTOMER_ATTRITION
 ```
+
+### Install Dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-4. Run the app:
+### Run Streamlit Application
 
-```
+```bash
 streamlit run app.py
 ```
 
@@ -121,33 +179,52 @@ streamlit run app.py
 
 ## 📊 Dataset
 
-* Source: Telco Customer Churn Dataset (Kaggle)
-* Contains customer details like:
+Dataset: Telco Customer Churn Dataset
 
-  * Demographics
-  * Account information
-  * Services used
-  * Billing data
+Includes:
+
+* Customer Demographics
+* Service Information
+* Account Details
+* Billing Information
+* Contract Information
+* Churn Status
 
 ---
 
-## 🔮 Future Improvements
+## 💬 RAG Chatbot Workflow
 
-* Deployment on Streamlit Cloud / AWS
-* Advanced ML models (XGBoost, Random Forest)
-* Real-time database integration
-* Customer segmentation dashboard
-* Email/SMS alert system
+1. Telecom documents are processed.
+2. Documents are converted into embeddings.
+3. Embeddings are stored in a FAISS vector database.
+4. User queries are converted into vectors.
+5. Relevant context is retrieved.
+6. LLM generates context-aware responses.
+
+---
+
+## 🔮 Future Enhancements
+
+* Deployment on AWS / Azure
+* Advanced LLM Integration
+* Multi-document Knowledge Base
+* Customer Segmentation Analytics
+* Real-time Database Connectivity
+* Email & SMS Retention Campaigns
+* Voice-enabled AI Assistant
 
 ---
 
 ## 👨‍💻 Author
 
-Ritik Manocha
-B.Tech (AI & Data Science)
+**Ritik Manocha**
+
+B.Tech – Artificial Intelligence & Data Science
+
+Aspiring AI/ML Engineer | Generative AI Enthusiast
 
 ---
 
-## ⭐ Show Your Support
+## ⭐ Support
 
-If you like this project, give it a ⭐ on GitHub!
+If you found this project useful, consider giving the repository a star.
